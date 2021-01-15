@@ -1,6 +1,6 @@
 # Overview:
 
-  * This Repository was created/updated during taking a course by [Jonas Schmedtmann](jonas.io)
+  * This Repository was created/updated during taking a course by [Jonas Schmedtmann](https://codingheroes.io/)
   * This repo contains three main projects that uses `Advanced` css technologies, namely:
 
     1. Natours Project (Advanced CSS with SaSS)
