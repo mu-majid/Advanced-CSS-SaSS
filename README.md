@@ -27,3 +27,27 @@
   * the visual formatting model uses the `box-model`, `floats` and `positioning` to render the CSS.
 
   ![overviewbrowser](./pics/overview-browser.png)
+
+  ##### CSS Parsing phase:
+
+  * A css rule consists of a selector and a declaration block.
+  * Step One: Cascading. When combining different stylesheets and resolving conflicts between different CSS rules and declarations when more than one rule apply to certain element.
+  * There are three types of stylesheets (Author, user, browser) - Author: is what we write as developers, user: when a user change his browser font size, and browser: default appearance of tags differ from browser to another one.
+
+  * **BUT how conflicts are resolved?** => First look at the *Importance*, then *Selector Specificity*, and the *source order*.
+
+  ![conflict](./pics/conflict-css.png)
+
+  * An Example of how specificity is calculated:
+    - Each rule will be assigned a tuple of numbers, and then compare the first number in all tuple, if there is a tie, move to second number and compare them (only the rules with a tie), until reaching the last number.
+    - The value/rule chosen is called cascaded value. 
+
+  ![spec-conflict](./pics/spec-conflict.png)
+
+  - Declarations with `!important` have the highest priority.
+  - but avoid using them in favor of writing maintainable code.
+  - inline styles will always have priority over styles in the stylesheets.
+  - Selector with **one** ID is more specific than a one with **1000** classes.
+  - The universal selector `*` has a specificity of `(0, 0, 0, 0)`.
+  - Always rely on specificity, not order, not inline, not important, so that the code would be more maintainable.
+  - But rely on order when using 3rd-party library - always put your author stylesheet last.
