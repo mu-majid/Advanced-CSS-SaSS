@@ -42,14 +42,18 @@ body {
 }
 
 .logo {
-  height: 35px; /* width controlled by the browser*/
+  height: 35px; /* width controlled by the browser since we defined height*/
 }
 
 .text-box {
+  /*Align text box div in center (vertically & horizontally)*/
   position: absolute; /* parent (header) is positioned relative*/
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
+
+  /* So that any text inside text-box div is aligned center */
+  text-align: center;
 }
 
 .heading-primary {
@@ -58,10 +62,11 @@ body {
 
   /* for shaky animation ??? */
   backface-visibility: hidden; 
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
-  display: block;
+  display: block; /* to make it take the full width and add line break*/
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
@@ -72,7 +77,7 @@ body {
 }
 
 .heading-primary-sub {
-  display: block;
+  display: block;  /* to make it take the full width and add line break*/
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
@@ -116,4 +121,80 @@ body {
     opacity: 1;
     transform: translate(0); /* Default/Original view */
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+/* when clicked*/
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777;
+}
+
+.btn::after {
+  content: ""; /* required even if empty*/
+  display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
+
+  /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+
+  /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
+  /* Also we are making this to make it behind our btn */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* make it behine original btn element */
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #ffffff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+@keyframes moveInBottom {
+  /* Initial State*/
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  /* Final State*/
+  100% {
+    opacity: 1;
+    transform: translate(0); /* Default/Original view */
+  }
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out;
+  animation-delay: .75s;
+  animation-fill-mode: backwards; /* apply 0% animation at start */
 }

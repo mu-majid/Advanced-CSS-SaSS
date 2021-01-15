@@ -42,6 +42,18 @@
   * relative positioning is calculated **relative** to the normal (default) position of the element in HTML.
   * absolute positioning is calculated from page borders, or if absolute element is inside an element, it will be positioned relative the parent's borders.
 
+  ###### `text-decoration: {value}`:
+
+  * The text-decoration property specifies the decoration added to text, and is a shorthand property for:
+      text-decoration-line (required)
+      text-decoration-color
+      text-decoration-style
+
+  ###### `display: {inline-block}`:
+
+  * Compared to `display: inline`, the major difference is that `display: inline`-block allows to set a width and height on the element.
+  * Also, with `display: inline-block`, the top and bottom margins/paddings are respected, but with display: inline they are not.
+  * Compared to `display: block`, the major difference is that `display: inline-block` does not add a line-break after the element, so the element can sit next to other elements.
 
 ## Side Notes :
 
@@ -66,4 +78,21 @@
 
   * the browser is [optizimed](https://developers.google.com/web/fundamentals/design-and-ux/animations/animations-and-performance) for using `opacity` and `transform` for the animations.
 
-  
+## Psuedo Elements:
+
+  *selector::psuedo-element*
+
+  * A CSS pseudo-element is used to style specified parts of an element.
+  * For example: 
+    1. Style the first letter, or line, of an element.
+    2. Insert content before, or after, the content of an element.
+    3. `::after`:  it adds like a virtual element after the original element and CSS3 allow us to style that virtual element.
+
+  * Note that:
+
+        The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
+
+        The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
+
+        For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
+
