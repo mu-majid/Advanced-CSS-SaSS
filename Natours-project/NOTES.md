@@ -57,3 +57,13 @@
 
   * The viewport is the user's visible area of a web page.
   * The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+## CSS Animations: 
+
+  * There are two types of animations in CSS:
+    1. Using transition property and change properties we want to animate on an event (like hovering an element).
+    2. Using `@keyframes` rules.
+
+  * the browser is [optizimed](https://developers.google.com/web/fundamentals/design-and-ux/animations/animations-and-performance) for using `opacity` and `transform` for the animations.
+
+  
