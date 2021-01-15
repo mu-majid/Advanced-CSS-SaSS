@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+  position: relative;
   height: 95vh; /* height of header element should be of 95% of the viewport height */
   background-image: linear-gradient(
     to right bottom, 
@@ -32,4 +33,33 @@ body {
   background-size: cover; /* whatever the width of the view port/element, it will ty to fit the element to box width */
   background-position: top; /* background by default is placed at top-left */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px; /* these pixels are calculated from parent element (header) which its position set to relative*/
+  left: 40px;
+}
+
+.logo {
+  height: 35px; /* width controlled by the browser*/
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
 }

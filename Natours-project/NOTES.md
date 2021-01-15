@@ -36,10 +36,22 @@
   * The line-height CSS property sets the height of a line box. It's commonly used to set the distance between lines of text.
   * check this [link](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
 
+  ###### `position: {value}`:
+
+  * Specify where an element should be positioned (static, relative, absolute, fixed, sticky)
+  * relative positioning is calculated **relative** to the normal (default) position of the element in HTML.
+  * absolute positioning is calculated from page borders, or if absolute element is inside an element, it will be positioned relative the parent's borders.
+
 
 ## Side Notes :
 
   * Padding does not get inherited.
+  * Every HTML element fas a default display, depending on what type of element it is. There are two display values: block and inline.
+  * Block Elements: stretch out to the left and right as far as it can.
+  * Inline Elements: takes up as much width as necessary. 
+  * `h1` is the most important heading element for **SEO**.
+  * [How to center and element vertically](https://vanseodesign.com/css/vertical-centering/)
+  * display span as block will make it occupy full widhth available and add a line break
 
 ## What is Viewport ?
 
