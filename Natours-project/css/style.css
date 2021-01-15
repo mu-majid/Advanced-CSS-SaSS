@@ -45,6 +45,13 @@ body {
   height: 35px; /* width controlled by the browser*/
 }
 
+.text-box {
+  position: absolute; /* parent (header) is positioned relative*/
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
+}
+
 .heading-primary {
   color: #ffffff;
   text-transform: uppercase;
