@@ -42,6 +42,18 @@
   * relative positioning is calculated **relative** to the normal (default) position of the element in HTML.
   * absolute positioning is calculated from page borders, or if absolute element is inside an element, it will be positioned relative the parent's borders.
 
+  ###### `text-decoration: {value}`:
+
+  * The text-decoration property specifies the decoration added to text, and is a shorthand property for:
+      text-decoration-line (required)
+      text-decoration-color
+      text-decoration-style
+
+  ###### `display: {inline-block}`:
+
+  * Compared to `display: inline`, the major difference is that `display: inline`-block allows to set a width and height on the element.
+  * Also, with `display: inline-block`, the top and bottom margins/paddings are respected, but with display: inline they are not.
+  * Compared to `display: block`, the major difference is that `display: inline-block` does not add a line-break after the element, so the element can sit next to other elements.
 
 ## Side Notes :
 
@@ -66,4 +78,3 @@
 
   * the browser is [optizimed](https://developers.google.com/web/fundamentals/design-and-ux/animations/animations-and-performance) for using `opacity` and `transform` for the animations.
 
-  

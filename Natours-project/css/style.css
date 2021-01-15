@@ -50,6 +50,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
+  text-align: center;
 }
 
 .heading-primary {
@@ -58,6 +59,7 @@ body {
 
   /* for shaky animation ??? */
   backface-visibility: hidden; 
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -116,4 +118,30 @@ body {
     opacity: 1;
     transform: translate(0); /* Default/Original view */
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
+  border-radius: 100px;
+  transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+/* when clicked*/
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777;
 }
