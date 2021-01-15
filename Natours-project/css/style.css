@@ -4,3 +4,197 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 */
+
+/* CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts for all the site, always fonts are placed in body*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; /* standard weight*/
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777; /* set text color*/
+  padding: 30px; /* applying padding to the whole site, to give us a nice white space */
+}
+
+.header {
+  position: relative;
+  height: 95vh; /* height of header element should be of 95% of the viewport height */
+  background-image: linear-gradient(
+    to right bottom, 
+    rgba(126, 213, 111, 0.8), 
+    rgba(40, 180, 131, 0.8)), 
+  url(../img/hero.jpg); /* linear grad shown on top, then the image*/
+  background-size: cover; /* whatever the width of the view port/element, it will ty to fit the element to box width */
+  background-position: top; /* background by default is placed at top-left */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px; /* these pixels are calculated from parent element (header) which its position set to relative*/
+  left: 40px;
+}
+
+.logo {
+  height: 35px; /* width controlled by the browser since we defined height*/
+}
+
+.text-box {
+  /*Align text box div in center (vertically & horizontally)*/
+  position: absolute; /* parent (header) is positioned relative*/
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
+
+  /* So that any text inside text-box div is aligned center */
+  text-align: center;
+}
+
+.heading-primary {
+  color: #ffffff;
+  text-transform: uppercase;
+
+  /* for shaky animation ??? */
+  backface-visibility: hidden; 
+  margin-bottom: 60px;
+}
+
+.heading-primary-main {
+  display: block; /* to make it take the full width and add line break*/
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  display: block;  /* to make it take the full width and add line break*/
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  /* Initial State*/
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  /* Final State*/
+  100% {
+    opacity: 1;
+    transform: translate(0); /* Default/Original view */
+  }
+}
+
+@keyframes moveInRight {
+  /* Initial State*/
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  /* Final State*/
+  100% {
+    opacity: 1;
+    transform: translate(0); /* Default/Original view */
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+/* when clicked*/
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #777;
+}
+
+.btn::after {
+  content: ""; /* required even if empty*/
+  display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
+
+  /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+
+  /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
+  /* Also we are making this to make it behind our btn */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* make it behine original btn element */
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #ffffff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+@keyframes moveInBottom {
+  /* Initial State*/
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  /* Final State*/
+  100% {
+    opacity: 1;
+    transform: translate(0); /* Default/Original view */
+  }
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out;
+  animation-delay: .75s;
+  animation-fill-mode: backwards; /* apply 0% animation at start */
+}
