@@ -78,3 +78,21 @@
 
   * the browser is [optizimed](https://developers.google.com/web/fundamentals/design-and-ux/animations/animations-and-performance) for using `opacity` and `transform` for the animations.
 
+## Psuedo Elements:
+
+  *selector::psuedo-element*
+
+  * A CSS pseudo-element is used to style specified parts of an element.
+  * For example: 
+    1. Style the first letter, or line, of an element.
+    2. Insert content before, or after, the content of an element.
+    3. `::after`:  it adds like a virtual element after the original element and CSS3 allow us to style that virtual element.
+
+  * Note that:
+
+        The double colon replaced the single-colon notation for pseudo-elements in CSS3. This was an attempt from W3C to distinguish between pseudo-classes and pseudo-elements.
+
+        The single-colon syntax was used for both pseudo-classes and pseudo-elements in CSS2 and CSS1.
+
+        For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
+
