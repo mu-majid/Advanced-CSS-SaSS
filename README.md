@@ -24,14 +24,14 @@
 ---
   #### What Actually Happens?
 
-  ##### Overview
+  #### Overview
 
   * The step `Process final CSS Values` is when units like `%` gets converted to `px`.
   * the visual formatting model uses the `box-model`, `floats` and `positioning` to render the CSS.
 
   ![overviewbrowser](./pics/overview-browser.png)
 
-  ##### **CSS Parsing phase - cascading step**:
+  #### CSS Parsing phase - cascading step:
 
   * A css rule consists of a selector and a declaration block.
   * Step One: Cascading. When combining different stylesheets and resolving conflicts between different CSS rules and declarations when more than one rule apply to certain element.
@@ -56,7 +56,7 @@
   - But rely on order when using 3rd-party library - always put your author stylesheet last.
 
 
-  ##### **CSS value parsing - value processing step**:
+  #### CSS value parsing - value processing step:
 
   * Any value goes through a six steps conversion process as indicated below.
 
@@ -76,7 +76,7 @@
   * `rem` are always measured relative to the document’s **root** font-size;
   * vh and vw are simply percentage measurements of the viewport’s height and width.
 
-  ##### **CSS value parsing - Inheritance**:
+  #### CSS value parsing - Inheritance:
 
   ![inherit](./pics/inherit.png)
 
@@ -88,7 +88,7 @@
   * The inherit keyword forces inheritance on a certain property;
   * The initial keyword resets a property to its initial value.
 
-  ##### **CSS Visual Formatting Model**:
+  #### CSS Visual Formatting Model:
 
   * Is an algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, in order to determine the final layout of the page.
   * It determines the following:
