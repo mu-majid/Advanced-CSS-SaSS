@@ -121,6 +121,7 @@
   **Positioning Schemes**:
 
   - three schemes are involved when positioning any css element.
+  - floated elements collapses parent height (fixed by using float clearing or using overflow the parent)
   - Since absolute positioning does not affect surrounding elements and they may overlap, css has what is known as stacking context that determines in which order elements are shown (layer above layer)
 
   ![box-position](./pics/box-position.png)
