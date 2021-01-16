@@ -6,7 +6,9 @@ Dark green: #28b485
 */
 
 /* CSS Reset*/
-* {
+*
+*::after
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit; /* tell all elements to Inherit this property from your parent (body) */
