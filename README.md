@@ -61,7 +61,7 @@
 
   * Also, the relative units get converted to pixels as indicated below:
 
-  ![relativeunits](./pic/relative-units.png)
+  ![relativeunits](./pics/relative-units.png)
 
   * Each property has an initial value, used if nothing is declared (and if there is no inheritance);
   * Browsers specify a root font-size for each page (usually 16px);
@@ -75,7 +75,7 @@
 
   ##### CSS value parsing - Inheritance:
 
-  ![inherit](./pic/inherit.png)
+  ![inherit](./pics/inherit.png)
 
   * Inheritance passes the values for some specific properties from parents to children — more
   maintainable code;
@@ -134,7 +134,7 @@
 
   - the process is divided into three main steps, 1. Think, 2. Build, and 3. Architect.
 
-  1. Think process:
+  1. **Think process**:
 
   * Use Component-Driven design, by dividing our pages into modular components.
   * What is a component? Modular building block that make up interfaces, that are held together by the layout (html) of the page.
@@ -142,7 +142,7 @@
   * These rules could be broken if we have a necessity.
   * Components are like `Organisms` in Atomic Design.
 
-  2. Build Process:
+  2. **Build Process**:
 
   * code the design by using html and css, but we have to think of naming classes.
   * We will follow `BEM` methodology for naming our classes.
@@ -151,7 +151,7 @@
   * BEM's MODIFIER => flag that make a different version of an element.
   * BEM is very popular because it creates a very low specificity selector which result in a more maintainable code.
 
-  3. Architect Process:
+  3. **Architect Process**:
 
   * There are some methodologies like `its-css` , `SMACSS`, bit we will use `seven-one` pattern.
   * `7` different folders for partial SaSS files, and `1` main SaSS file to import all other files into a compiled CSS stylesheet.
