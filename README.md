@@ -84,3 +84,52 @@
   * Inheritance of a property only works if no one declares a value for that property;
   * The inherit keyword forces inheritance on a certain property;
   * The initial keyword resets a property to its initial value.
+
+  ##### CSS Visual Formatting Model:
+
+    * Is an algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, in order to determine the final layout of the page.
+    * It determines the following:
+      1. Dimensions of the boxes: the box model.
+      2. Box type: inline, block, inline-block.
+      3. Positioning Scheme: float and positioning.
+      4. Stacking contexts;
+      5. Other elements in the render tree;
+      6. Viewport size, dimensions of images, etc.
+
+    **The Box Model**:
+
+    - Determines how each element will appear on the screen. It can be thought of as a rectangle with height, width, border, padding and margin.
+
+  ![boxmodel](./pics/box-model.png)
+
+    - the width of a box is `right border + right padding  + specified width + left padding + left border`.
+    - the height of a box is `top border + top padding  + specified height + bottom padding + bottom border`.
+
+    - The box-sizing's value of border-box:  padding and border will be included in the specified width/height.
+
+  ![box-sizing](./pics/box-sizing.png)
+
+    **Boxes Types**
+
+    - There are three main box types, shown below:
+
+  ![box-types](./pics/box-types.png)
+
+    **Positioning Schemes**:
+
+    - three schemes are involved when positioning any css element.
+    - Since absolute positioning does not affect surrounding elements and they may overlap, css has what is known as stacking context that determines in which order elements are shown (layer above layer)
+
+  ![box-position](./pics/box-position.png)
+
+    **Stacking Context**:
+
+    - Determines in which order elements are shown on the screen.
+    - The most famous rule creating new context is the `z-index` property.
+    - Note that opacity different from `1` or another transform creates new stacking context.
+
+
+
+
+
+

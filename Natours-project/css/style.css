@@ -176,7 +176,7 @@ body {
   top: 0;
   left: 0;
 
-  /* make it behine original btn element */
+  /* make it behind original btn element */
   z-index: -1;
   transition: all .4s;
 }

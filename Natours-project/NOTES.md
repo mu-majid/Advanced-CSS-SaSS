@@ -55,6 +55,12 @@
   * Also, with `display: inline-block`, the top and bottom margins/paddings are respected, but with display: inline they are not.
   * Compared to `display: block`, the major difference is that `display: inline-block` does not add a line-break after the element, so the element can sit next to other elements.
 
+  ###### `float: left | right`:
+
+  * causes the element to be taken out of its normal flow and shift it completely to the right or the left as far as possible until it touches the borders of the containing element.
+  * inline elements and text will wrap around floated elements.
+  * use `clear fixes` to adjust height of floated elements.
+
 ## Side Notes :
 
   * Padding does not get inherited.
