@@ -28,7 +28,7 @@
 
   ![overviewbrowser](./pics/overview-browser.png)
 
-  ##### CSS Parsing phase:
+  ##### CSS Parsing phase - cascading step:
 
   * A css rule consists of a selector and a declaration block.
   * Step One: Cascading. When combining different stylesheets and resolving conflicts between different CSS rules and declarations when more than one rule apply to certain element.
@@ -51,3 +51,24 @@
   - The universal selector `*` has a specificity of `(0, 0, 0, 0)`.
   - Always rely on specificity, not order, not inline, not important, so that the code would be more maintainable.
   - But rely on order when using 3rd-party library - always put your author stylesheet last.
+
+
+  ##### CSS value parsing - value processing step:
+
+  * Any value goes through a six steps conversion process as indicated below.
+
+  ![valueparsing](./pics/value-parsing.png)
+
+  * Also, the relative units get converted to pixels as indicated below:
+
+  ![relativeconvert](./pic/relative-units.png)
+
+  * Each property has an initial value, used if nothing is declared (and if there is no inheritance);
+  * Browsers specify a root font-size for each page (usually 16px);
+  * Percentages and relative values are always converted to `pixels`;
+  * Percentages are measured relative to their **parent’s** `font-size`, if used to specify `font-size`;
+  * Percentages are measured relative to their **parent’s** `width`, if used to specify `lengths`;
+  * `em` are measured relative to their **parent** `font-size`, if used to specify `font-size`;
+  * `em` are measured relative to the **current** `font-size`, if used to specify `lengths`;
+  * `rem` are always measured relative to the document’s **root** font-size;
+  * vh and vw are simply percentage measurements of the viewport’s height and width.
