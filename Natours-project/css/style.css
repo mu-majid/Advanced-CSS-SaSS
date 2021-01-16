@@ -9,7 +9,7 @@ Dark green: #28b485
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit; /* tell all elements to Inherit this property from your parent (body) */
 }
 
 html {
@@ -25,6 +25,9 @@ body {
   line-height: 1.7;
   color: #777; /* set text color*/
   padding: 3rem; /* applying padding to the whole site, to give us a nice white space */
+
+  box-sizing: border-box;
+
 }
 
 .header {
