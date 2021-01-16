@@ -28,7 +28,7 @@
 
   ![overviewbrowser](./pics/overview-browser.png)
 
-  ##### CSS Parsing phase - cascading step:
+  ###### CSS Parsing phase - cascading step:
 
   * A css rule consists of a selector and a declaration block.
   * Step One: Cascading. When combining different stylesheets and resolving conflicts between different CSS rules and declarations when more than one rule apply to certain element.
@@ -53,7 +53,7 @@
   - But rely on order when using 3rd-party library - always put your author stylesheet last.
 
 
-  ##### CSS value parsing - value processing step:
+  ###### CSS value parsing - value processing step:
 
   * Any value goes through a six steps conversion process as indicated below.
 
@@ -73,7 +73,7 @@
   * `rem` are always measured relative to the document’s **root** font-size;
   * vh and vw are simply percentage measurements of the viewport’s height and width.
 
-  ##### CSS value parsing - Inheritance:
+  ###### CSS value parsing - Inheritance:
 
   ![inherit](./pic/inherit.png)
 
@@ -85,14 +85,14 @@
   * The inherit keyword forces inheritance on a certain property;
   * The initial keyword resets a property to its initial value.
 
-  ##### CSS Visual Formatting Model:
+  ###### CSS Visual Formatting Model:
 
     * Is an algorithm that calculates boxes and determines the layout of these boxes, for each element in the render tree, in order to determine the final layout of the page.
     * It determines the following:
-      1. Dimensions of the boxes: the box model.
-      2. Box type: inline, block, inline-block.
-      3. Positioning Scheme: float and positioning.
-      4. Stacking contexts;
+      1. **Dimensions of the boxes: the box model**.
+      2. **Box type: inline, block, inline-block**.
+      3. **Positioning Scheme: float and positioning**.
+      4. **Stacking contexts**;
       5. Other elements in the render tree;
       6. Viewport size, dimensions of images, etc.
 
@@ -109,7 +109,7 @@
 
   ![box-sizing](./pics/box-sizing.png)
 
-    **Boxes Types**
+    **Boxes Types**:
 
     - There are three main box types, shown below:
 
@@ -128,8 +128,40 @@
     - The most famous rule creating new context is the `z-index` property.
     - Note that opacity different from `1` or another transform creates new stacking context.
 
+  ![stacking-context](./pics/stacking-context.png)
 
+  #### CSS Sheets Architecture:
 
+  - the process is divided into three main steps, 1. Think, 2. Build, and 3. Architect.
 
+  1. Think process:
 
+    * Use Component-Driven design, by dividing our pages into modular components.
+    * What is a component? Modular building block that make up interfaces, that are held together by the layout (html) of the page.
+    * Components are reusable (in one or multiple projects) and independent (use them anywhere on the page - should not depend on their parents).
+    * These rules could be broken if we have a necessity.
+    * Components are like `Organisms` in Atomic Design.
 
+  2. Build Process:
+
+    * code the design by using html and css, but we have to think of naming classes.
+    * We will follow `BEM` methodology for naming our classes.
+    * BEM's BLOCK => standalone component that is meaningful on its own.
+    * BEM's ELEMENT => part of the block, has no standalone meaning.
+    * BEM's MODIFIER => flag that make a different version of an element.
+    * BEM is very popular because it creates a very low specificity selector which result in a more maintainable code.
+
+  3. Architect Process:
+
+    * There are some methodologies like `its-css` , `SMACSS`, bit we will use `seven-one` pattern.
+    * `7` different folders for partial SaSS files, and `1` main SaSS file to import all other files into a compiled CSS stylesheet.
+    * the `7` folders are: 
+      1. base: basic product definitions.
+      2. components: one file for each component.
+      3. layout: define overall layout of the project.
+      4. pages: define styles for specific pages
+      5. themes: implementing different themes
+      6. abstracts: code that does not produce any css, like variables, or mixins.
+      7. vendors: all 3rd-party css.
+
+    * Not all 7 folders needs to be present, this depends on the project scale.
