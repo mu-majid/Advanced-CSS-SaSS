@@ -45,17 +45,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem; /* these pixels are calculated from parent element (header) which its position set to relative*/
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem; /* width controlled by the browser since we defined height*/
 }
 
-.text-box {
+.header__text-box {
   /*Align text box div in center (vertically & horizontally)*/
   position: absolute; /* parent (header) is positioned relative*/
   top: 40%;
@@ -75,7 +75,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block; /* to make it take the full width and add line break*/
   font-size: 6rem;
   font-weight: 400;
@@ -86,7 +86,7 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;  /* to make it take the full width and add line break*/
   font-size: 2rem;
   font-weight: 700;
@@ -156,7 +156,7 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
 }
 
-.btn-white {
+.btn--white {
   background-color: #ffffff;
   color: #777;
 }
@@ -181,7 +181,7 @@ body {
   transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #ffffff;
 }
 
@@ -204,7 +204,7 @@ body {
   }
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out;
   animation-delay: .75s;
   animation-fill-mode: backwards; /* apply 0% animation at start */
