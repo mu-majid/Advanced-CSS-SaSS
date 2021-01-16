@@ -96,3 +96,11 @@
 
         For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
 
+
+## Why and How to use `rem/em`?
+
+  - because we want an easy way to change measurements in our page with one simple setting, meaning, **REMEMBER** that `rem` is calculated relative to the root `font-size`. And changing this root size will affect all our measurements if they were in `rem`s.
+
+  - This is alternative to writing 100s of lines of media queries.
+
+  - Note that old IE browsers does not support `rem`. 
