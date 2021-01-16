@@ -6,20 +6,30 @@ Dark green: #28b485
 */
 
 /* CSS Reset*/
-* {
+*
+*::after
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit; /* tell all elements to Inherit this property from your parent (body) */
+}
+
+html {
+  /* to make our life easier (default=16px) */
+  font-size: 62.5%; /* 62.5/100 * 16px = 10px, We are using % so that root font size change if user changes his browser's default by zooming*/ 
 }
 
 /* Fonts for all the site, always fonts are placed in body*/
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400; /* standard weight*/
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777; /* set text color*/
-  padding: 30px; /* applying padding to the whole site, to give us a nice white space */
+  padding: 3rem; /* applying padding to the whole site, to give us a nice white space */
+
+  box-sizing: border-box;
+
 }
 
 .header {
@@ -35,17 +45,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px; /* these pixels are calculated from parent element (header) which its position set to relative*/
-  left: 40px;
+  top: 4rem; /* these pixels are calculated from parent element (header) which its position set to relative*/
+  left: 4rem;
 }
 
-.logo {
-  height: 35px; /* width controlled by the browser since we defined height*/
+.header__logo {
+  height: 3.5rem; /* width controlled by the browser since we defined height*/
 }
 
-.text-box {
+.header__text-box {
   /*Align text box div in center (vertically & horizontally)*/
   position: absolute; /* parent (header) is positioned relative*/
   top: 40%;
@@ -62,25 +72,25 @@ body {
 
   /* for shaky animation ??? */
   backface-visibility: hidden; 
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block; /* to make it take the full width and add line break*/
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;  /* to make it take the full width and add line break*/
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
 
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -91,11 +101,11 @@ body {
   /* Initial State*/
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   /* Final State*/
@@ -109,11 +119,11 @@ body {
   /* Initial State*/
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   /* Final State*/
@@ -127,25 +137,26 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
 }
 
 /* when clicked*/
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
 }
 
-.btn-white {
+.btn--white {
   background-color: #ffffff;
   color: #777;
 }
@@ -157,7 +168,7 @@ body {
   /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
 
   /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
   /* Also we are making this to make it behind our btn */
@@ -165,12 +176,12 @@ body {
   top: 0;
   left: 0;
 
-  /* make it behine original btn element */
+  /* make it behind original btn element */
   z-index: -1;
   transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #ffffff;
 }
 
@@ -183,7 +194,7 @@ body {
   /* Initial State*/
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   /* Final State*/
@@ -193,7 +204,7 @@ body {
   }
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out;
   animation-delay: .75s;
   animation-fill-mode: backwards; /* apply 0% animation at start */
