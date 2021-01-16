@@ -9,6 +9,8 @@
 
   * Each project Directory will have a README file with notes about challenges and gotchas faced during building the project.
 
+---
+
 ## How CSS Works? (Behind The Scene):
 
   #### Three Golden Rules When Building HTML & CSS:
@@ -19,6 +21,7 @@
 
   3. Web Performance: less size, and fast app. Somethings to consider are less HTTP requests, Less Code, Compress Code, use CSS preprocessor (like SaSS), **less images**, and compress images.
 
+---
   #### What Actually Happens?
 
   ##### Overview
@@ -130,6 +133,7 @@
 
   ![stacking-context](./pics/stacking-context.png)
 
+---
   #### CSS Sheets Architecture:
 
   - the process is divided into three main steps, 1. Think, 2. Build, and 3. Architect.
@@ -150,6 +154,8 @@
   * BEM's ELEMENT => part of the block, has no standalone meaning.
   * BEM's MODIFIER => flag that make a different version of an element.
   * BEM is very popular because it creates a very low specificity selector which result in a more maintainable code.
+
+  ![bem](./pics/bem.png)
 
   3. **Architect Process**:
 
