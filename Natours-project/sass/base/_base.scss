@@ -1,0 +1,24 @@
+// Low Level scss, like resets, body styling ...
+// This will be partial file. (note the name starts with _)
+
+
+/* CSS Reset*/
+*
+*::after
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* tell all elements to Inherit this property from your parent (body) */
+}
+
+// this could be a typography
+// BUT it is actually a global definition of what a `rem` is
+html {
+  /* to make our life easier (default=16px) */
+  font-size: 62.5%; /* 62.5/100 * 16px = 10px, We are using % so that root font size change if user changes his browser's default by zooming*/ 
+}
+
+/* Check typography file for other presetting */
+body {
+  box-sizing: border-box;
+}

@@ -165,8 +165,8 @@
   * the `7` folders are: 
     1. base: basic product definitions.
     2. components: one file for each component.
-    3. layout: define overall layout of the project.
-    4. pages: define styles for specific pages
+    3. layout: define overall layout of the project (header, footer, ...) and hold the components.
+    4. pages: define styles for specific pages like home page would have specific styles
     5. themes: implementing different themes
     6. abstracts: code that does not produce any css, like variables, or mixins.
     7. vendors: all 3rd-party css.

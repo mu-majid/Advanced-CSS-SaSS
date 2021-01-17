@@ -1,0 +1,41 @@
+
+/* Fonts for all the site, always fonts are placed in body*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; /* standard weight*/
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark; /* set text color*/
+  padding: 3rem; /* applying padding to the whole site, to give us a nice white space */
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  /* for shaky animation ??? */
+  backface-visibility: hidden; 
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block; /* to make it take the full width and add line break*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+  
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  
+  &--sub {
+    display: block;  /* to make it take the full width and add line break*/
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+  
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

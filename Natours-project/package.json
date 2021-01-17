@@ -1,7 +1,7 @@
 {
-  "name": "Natours-project",
+  "name": "natours-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "natours Project (SaSS + Advanced CSS)",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
