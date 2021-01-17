@@ -4,6 +4,8 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
+$color-white: #ffffff;
+$color-black: black;
 
 /* CSS Reset*/
 *
@@ -39,63 +41,67 @@ body {
     to right bottom, 
     rgba($color-primary-light, 0.8), 
     rgba($color-primary-dark, 0.8)), 
-  url(../img/hero.jpg); /* linear grad shown on top, then the image*/
+    url(../img/hero.jpg); /* linear grad shown on top, then the image*/
   background-size: cover; /* whatever the width of the view port/element, it will ty to fit the element to box width */
   background-position: top; /* background by default is placed at top-left */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem; /* these pixels are calculated from parent element (header) which its position set to relative*/
+    left: 4rem;
+  }
+  
+  &__logo {
+    height: 3.5rem; /* width controlled by the browser since we defined height*/
+  }
+  
+  &__text-box {
+    /*Align text box div in center (vertically & horizontally)*/
+    position: absolute; /* parent (header) is positioned relative*/
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
+  
+    /* So that any text inside text-box div is aligned center */
+    text-align: center;
+  }
 }
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem; /* these pixels are calculated from parent element (header) which its position set to relative*/
-  left: 4rem;
-}
 
-.header__logo {
-  height: 3.5rem; /* width controlled by the browser since we defined height*/
-}
-
-.header__text-box {
-  /*Align text box div in center (vertically & horizontally)*/
-  position: absolute; /* parent (header) is positioned relative*/
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* shift a div to the left by .5 of the element's width, also the same for the height*/
-
-  /* So that any text inside text-box div is aligned center */
-  text-align: center;
-}
 
 .heading-primary {
-  color: #ffffff;
+  color: $color-white;
   text-transform: uppercase;
 
   /* for shaky animation ??? */
   backface-visibility: hidden; 
   margin-bottom: 6rem;
+
+  &--main {
+    display: block; /* to make it take the full width and add line break*/
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+  
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  
+  &--sub {
+    display: block;  /* to make it take the full width and add line break*/
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+  
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
 }
 
-.heading-primary--main {
-  display: block; /* to make it take the full width and add line break*/
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
 
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-  display: block;  /* to make it take the full width and add line break*/
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
 
 @keyframes moveInLeft {
   /* Initial State*/
@@ -133,61 +139,68 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem;
-}
+.btn {
+  &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
-}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2); /*x-dir, y-dir, blur, color*/
 
-/* when clicked*/
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); /*x-dir, y-dir, blur, color*/
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn--white {
-  background-color: #ffffff;
-  color: $color-grey-dark;
-}
+  /* when clicked*/
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2); /*x-dir, y-dir, blur, color*/
+  }
 
-.btn::after {
-  content: ""; /* required even if empty*/
-  display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
 
-  /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
+    &::after {
+      background-color: $color-white;
+    }
+  }
 
-  /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
-  /* Also we are making this to make it behind our btn */
-  position: absolute;
-  top: 0;
-  left: 0;
+  &::after {
+    content: ""; /* required even if empty*/
+    display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
+  
+    /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+  
+    /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
+    /* Also we are making this to make it behind our btn */
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    /* make it behind original btn element */
+    z-index: -1;
+    transition: all .4s;
+  }
 
-  /* make it behind original btn element */
-  z-index: -1;
-  transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #ffffff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
+  &--animated {
+    animation: moveInBottom .5s ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards; /* apply 0% animation at start */
+  }
 }
 
 @keyframes moveInBottom {
@@ -202,10 +215,4 @@ body {
     opacity: 1;
     transform: translate(0); /* Default/Original view */
   }
-}
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out;
-  animation-delay: .75s;
-  animation-fill-mode: backwards; /* apply 0% animation at start */
 }
