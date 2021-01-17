@@ -110,3 +110,21 @@
   - This is alternative to writing 100s of lines of media queries.
 
   - Note that old IE browsers does not support `rem`. 
+
+## Responsive Design Principles: 
+
+  - Fluid Grids and Layouts: To allow content to easily adapt to the current viewport width used to browse the website, Use `%` rather than `px` for all layout-related lengths (like width).
+
+  - Flexible and responsive images: Images don't adapt like text to the viewport, so make sure they adapt by using adaptive/responsive widths. (more on that later)
+
+  - Media Queries: change styles on certain viewport widths (breakpoints), allowing us to create different version of our website for different widths.
+
+  ### Layout Types:
+
+  * There exist three types of layouts: 
+
+  **Float Layouts**: put boxes side-by-side (oldest type and most widely used)
+
+  **Flexbox**: laying element in one dimensional row.
+
+  **CSS Grid**: used for a 2-d layout page.
