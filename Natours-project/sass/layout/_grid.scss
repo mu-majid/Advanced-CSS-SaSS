@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width; // 114rem is like a standard or what we usually use
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -10,7 +9,6 @@
   @include clearfix;
 
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
