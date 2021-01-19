@@ -1,10 +1,24 @@
 .row {
-  max-width: $grid-width;
+  max-width: $grid-width; // 114rem is like a standard or what we usually use
   background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: $grid-gutter-vertical;
   }
+
+  @include clearfix;
+
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-gutter-horizontal}) / 2);
+    background-color: orangered;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-gutter-horizontal;
+    }
+  }
+
 
 }

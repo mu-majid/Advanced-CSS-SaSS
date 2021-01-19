@@ -13,6 +13,8 @@
 
 ## How CSS Works? (Behind The Scene):
 
+  *Check answer in this [link](https://stackoverflow.com/questions/44044956/how-does-browser-page-lifecycle-sequence-work/44254310)*
+
   #### Three Golden Rules When Building HTML & CSS:
 
   1. Responsive Design: Websites should work responsively to any device they work on, topics like fluid layouts, media queries, responsive images, correct units, and desktop-first vs mobile-first approaches are crucial.

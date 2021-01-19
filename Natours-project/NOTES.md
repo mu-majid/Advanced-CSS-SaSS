@@ -70,7 +70,8 @@
   * `h1` is the most important heading element for **SEO**.
   * [How to center and element vertically](https://vanseodesign.com/css/vertical-centering/)
   * display span as block will make it occupy full widhth available and add a line break.
-  * to center a block element inside another block element => use the trick `margin: 0 auto`
+  * to center a block element inside another block element => use the trick `margin: 0 auto`.
+  * `calc` function allows us to mix units while doing calculations, also note these calc are done during browser's layout step (during site rendering by the visual formatting model)
 
 ## What is Viewport ?
 
