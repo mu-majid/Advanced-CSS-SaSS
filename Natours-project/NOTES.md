@@ -69,7 +69,12 @@
   * Inline Elements: takes up as much width as necessary. 
   * `h1` is the most important heading element for **SEO**.
   * [How to center and element vertically](https://vanseodesign.com/css/vertical-centering/)
-  * display span as block will make it occupy full widhth available and add a line break
+  * display span as block will make it occupy full widhth available and add a line break.
+  * to center a block element inside another block element => use the trick `margin: 0 auto`.
+  * `calc` function allows us to mix units while doing calculations, also note these calc are done during browser's layout step (during site rendering by the visual formatting model).
+  * centering a heading (text) could be done using a utility class (basically a div that wraps all text tags we want to center).
+  * Utility classes keep out components reusable and allow us to use them independently, for example, having heading-secondary class (h2 element) and may be we will center it in one page and not the other, so we should use a utility class (div with class) to wrap that heading-secondary we want to center. Same also may be applied to margins bottom to a heading or something like that.
+  * always define images widths and `left, right` positioning with `%` for responsive pages.
 
 ## What is Viewport ?
 
@@ -110,3 +115,26 @@
   - This is alternative to writing 100s of lines of media queries.
 
   - Note that old IE browsers does not support `rem`. 
+
+## Responsive Design Principles: 
+
+  - Fluid Grids and Layouts: To allow content to easily adapt to the current viewport width used to browse the website, Use `%` rather than `px` for all layout-related lengths (like width).
+
+  - Flexible and responsive images: Images don't adapt like text to the viewport, so make sure they adapt by using adaptive/responsive widths. (more on that later)
+
+  - Media Queries: change styles on certain viewport widths (breakpoints), allowing us to create different version of our website for different widths.
+
+  ### Layout Types:
+
+  * There exist three types of layouts: 
+
+  **Float Layouts**: put boxes side-by-side (oldest type and most widely used)
+
+  **Flexbox**: laying element in one dimensional row.
+
+  **CSS Grid**: used for a 2-d layout page.
+
+## Designing a Custom Grid:
+
+ - Divide the page to rows and columns.
+ - The row's max-width as a rule of thumb is defined to be 1140px (114rem - where the root font-size is 10px)

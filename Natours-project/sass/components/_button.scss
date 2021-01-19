@@ -1,0 +1,88 @@
+// component since it could be used independently across different pages/projects
+.btn {
+  &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block; /* Used with inline elements with paddings, ht, wdth, ... */
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $default-font-size;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2); /*x-dir, y-dir, blur, color*/
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  /* when clicked*/
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2); /*x-dir, y-dir, blur, color*/
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: ""; /* required even if empty*/
+    display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
+  
+    /* after psuedo element is treated like a child, so its wdth, hgt, radius are the same as its parent(btn) */
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+  
+    /* We marked the btn position as relative so that the psuedo element position itself abslotely relative to it*/
+    /* Also we are making this to make it behind our btn */
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    /* make it behind original btn element */
+    z-index: -1;
+    transition: all .4s;
+  }
+
+  &--animated {
+    animation: moveInBottom .5s ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards; /* apply 0% animation at start */
+  }
+}
+
+.btn-text {
+  &:link, &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block; // to be able to use box-model properties like padding and margins
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all .2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    transform: translateY(0);
+  }
+}

@@ -13,6 +13,8 @@
 
 ## How CSS Works? (Behind The Scene):
 
+  *Check answer in this [link](https://stackoverflow.com/questions/44044956/how-does-browser-page-lifecycle-sequence-work/44254310)*
+
   #### Three Golden Rules When Building HTML & CSS:
 
   1. Responsive Design: Websites should work responsively to any device they work on, topics like fluid layouts, media queries, responsive images, correct units, and desktop-first vs mobile-first approaches are crucial.
@@ -121,6 +123,7 @@
   **Positioning Schemes**:
 
   - three schemes are involved when positioning any css element.
+  - floated elements collapses parent height (fixed by using float clearing or using overflow the parent)
   - Since absolute positioning does not affect surrounding elements and they may overlap, css has what is known as stacking context that determines in which order elements are shown (layer above layer)
 
   ![box-position](./pics/box-position.png)
@@ -164,10 +167,25 @@
   * the `7` folders are: 
     1. base: basic product definitions.
     2. components: one file for each component.
-    3. layout: define overall layout of the project.
-    4. pages: define styles for specific pages
+    3. layout: define overall layout of the project (header, footer, ...) and hold the components.
+    4. pages: define styles for specific pages like home page would have specific styles
     5. themes: implementing different themes
     6. abstracts: code that does not produce any css, like variables, or mixins.
     7. vendors: all 3rd-party css.
 
   * Not all 7 folders needs to be present, this depends on the project scale.
+
+  ---
+
+  ## What is SaSS ?
+
+  * CSS preprocessor or an extension of CSS that adds power ana elegance to the basic language.
+  * Features SaSS gives us: 
+    1. Variables for font-sizes, colors, ...
+    2. Nesting:  With it we write less code.
+    3. Operators: math ops.
+    4. Partials and Imports: write in different files then import them into one file.
+    5. Mixins: reusable pieces of CSS.
+    6. Functions, that their return variables could be used later.
+    7. Extends: make different selector inherit  declarations that are common to all of them.
+    8. Control Directives: for writing complex code using conditionals and loops. [Not Included]
