@@ -250,7 +250,11 @@ body {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   /* linear grad shown on top, then the image*/
-  background-size: cover; }
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -11.5rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
 
 .header {
   position: relative;
