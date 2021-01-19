@@ -171,3 +171,10 @@ body {
     /* shift a div to the left by .5 of the element's width, also the same for the height*/
     /* So that any text inside text-box div is aligned center */
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
