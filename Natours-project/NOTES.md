@@ -71,7 +71,9 @@
   * [How to center and element vertically](https://vanseodesign.com/css/vertical-centering/)
   * display span as block will make it occupy full widhth available and add a line break.
   * to center a block element inside another block element => use the trick `margin: 0 auto`.
-  * `calc` function allows us to mix units while doing calculations, also note these calc are done during browser's layout step (during site rendering by the visual formatting model)
+  * `calc` function allows us to mix units while doing calculations, also note these calc are done during browser's layout step (during site rendering by the visual formatting model).
+  * centering a heading (text) could be done using a utility class (basically a div that wraps all text tags we want to center).
+  * Utility classes keep out components reusable and allow us to use them independently, for example, having heading-secondary class (h2 element) and may be we will center it in one page and not the other, so we should use a utility class (div with class) to wrap that heading-secondary we want to center. Same also may be applied to margins bottom to a heading or something like that.
 
 ## What is Viewport ?
 
