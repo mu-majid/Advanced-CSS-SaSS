@@ -69,7 +69,9 @@
   * Inline Elements: takes up as much width as necessary. 
   * `h1` is the most important heading element for **SEO**.
   * [How to center and element vertically](https://vanseodesign.com/css/vertical-centering/)
-  * display span as block will make it occupy full widhth available and add a line break
+  * display span as block will make it occupy full widhth available and add a line break.
+  * to center a block element inside another block element => use the trick `margin: 0 auto`.
+  * `calc` function allows us to mix units while doing calculations, also note these calc are done during browser's layout step (during site rendering by the visual formatting model)
 
 ## What is Viewport ?
 
@@ -128,3 +130,8 @@
   **Flexbox**: laying element in one dimensional row.
 
   **CSS Grid**: used for a 2-d layout page.
+
+## Designing a Custom Grid:
+
+ - Divide the page to rows and columns.
+ - The row's max-width as a rule of thumb is defined to be 1140px (114rem - where the root font-size is 10px)
