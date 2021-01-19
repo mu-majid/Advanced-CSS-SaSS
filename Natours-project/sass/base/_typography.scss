@@ -50,9 +50,6 @@ body {
     $color-primary-dark
   );
   display: inline-block;
-  // position: absolute;
-  // left: 50%;
-  // transform: translate(-50%);
   -webkit-background-clip: text;
   color: transparent; // to make text transparent so that the bg-clip be visible
   transition: all .2s;
