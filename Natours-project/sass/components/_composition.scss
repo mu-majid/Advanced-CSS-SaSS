@@ -1,0 +1,26 @@
+.composition {
+
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    border-radius: 2px;
+
+    // to make the images above one another, not lined up in a column
+    position: absolute;
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+  }
+}
