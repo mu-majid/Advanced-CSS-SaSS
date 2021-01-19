@@ -9,15 +9,38 @@
 
   @include clearfix;
 
-
-  .col-1-of-2 {
-    width: calc((100% - #{$grid-gutter-horizontal}) / 2);
+  [class^="col-"] {
     background-color: orangered;
     float: left;
 
     &:not(:last-child) {
       margin-right: $grid-gutter-horizontal;
     }
+  }
+
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - #{$grid-gutter-horizontal * 2}) / 3);
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - #{$grid-gutter-horizontal * 3}) / 4);
+  }
+
+  .col-2-of-3 {
+    width: calc((2 * (100% - #{$grid-gutter-horizontal * 2}) / 3) + #{$grid-gutter-horizontal});
+  }
+
+  .col-2-of-4 {
+    width: calc((2 * (100% - #{$grid-gutter-horizontal * 3}) / 4) + #{$grid-gutter-horizontal});
+  }
+
+  .col-3-of-4 {
+    width: calc((3 * (100% - #{$grid-gutter-horizontal * 3}) / 4) + 2*#{$grid-gutter-horizontal});
   }
 
 
