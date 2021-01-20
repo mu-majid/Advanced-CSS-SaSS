@@ -61,6 +61,10 @@
   * inline elements and text will wrap around floated elements.
   * use `clear fixes` to adjust height of floated elements.
 
+  ###### `box-decoration-break: {value}`:
+  
+  * The box-decoration-break property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element is applied when the box for the element is fragmented.
+
 ## Side Notes :
 
   * Padding does not get inherited.
