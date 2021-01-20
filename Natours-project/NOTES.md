@@ -61,6 +61,10 @@
   * inline elements and text will wrap around floated elements.
   * use `clear fixes` to adjust height of floated elements.
 
+  ###### `box-decoration-break: {value}`:
+  
+  * The box-decoration-break property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element is applied when the box for the element is fragmented.
+
 ## Side Notes :
 
   * Padding does not get inherited.
@@ -75,6 +79,7 @@
   * centering a heading (text) could be done using a utility class (basically a div that wraps all text tags we want to center).
   * Utility classes keep out components reusable and allow us to use them independently, for example, having heading-secondary class (h2 element) and may be we will center it in one page and not the other, so we should use a utility class (div with class) to wrap that heading-secondary we want to center. Same also may be applied to margins bottom to a heading or something like that.
   * always define images widths and `left, right` positioning with `%` for responsive pages.
+  * This [article](https://css-tricks.com/almanac/properties/p/perspective/) describes the difference between `perspective` and transform: perspective.
 
 ## What is Viewport ?
 
