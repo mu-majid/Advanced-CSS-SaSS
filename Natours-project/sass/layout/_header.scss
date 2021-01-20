@@ -8,6 +8,7 @@
     url(../img/hero.jpg); /* linear grad shown on top, then the image*/
   background-size: cover; /* whatever the width of the view port/element, it will ty to fit the element to box width */
   background-position: top; /* background by default is placed at top-left */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* to clip or cut  part of the visible element */
 
   &__logo-box {

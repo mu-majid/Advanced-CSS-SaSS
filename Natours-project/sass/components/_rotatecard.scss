@@ -1,0 +1,143 @@
+.card {
+
+  // Rotating Functionality
+  //////////////////////////
+  perspective: 150rem;
+  // for firefox to work
+  -moz-perspective: 150rem;
+  position: relative;
+
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    transition: all .9s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    overflow: hidden; // because child image actually overflow the the div rounded radius
+    width: 100%;
+    backface-visibility: hidden; // hide backside of element
+
+    &--front {
+      background-color: $color-white;
+
+    }
+
+    &--back {
+      transform: rotateY(180deg); // back already rotated without hovering
+
+      &--1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+  }
+
+
+  // when we hover card component -> rotate it, and also rotate card side front only by 180deg
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  // when we hover card component -> rotate it, and also rotate card side back only by 0deg as it is already rotated 180deg as initial state
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // Front Side Styling
+  /////////////////////
+  &__picture {
+    background-size: cover;
+    height: 23rem; // by experiment
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+    }
+    &--2 {
+      background-image: url(../img/nat-5.jpg);
+    }
+    &--3 {
+      background-image: url(../img/nat-5.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 8rem;
+    right: 3.1rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      padding-inline-start: 0;
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+
+  // BACK SIDE STYLING
+  ////////////////////
+
+  &__cta {
+    position: absolute;
+    top: 50%; // calc from  parent
+    left: 50%;
+    transform: translate(-50%, -50%); // calc from element not parent
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    margin-bottom: 8rem;
+    text-align: center;
+    color: $color-white;
+
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: .5rem;
+
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+  }
+}
