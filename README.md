@@ -157,6 +157,7 @@
   * BEM's ELEMENT => part of the block, has no standalone meaning.
   * BEM's MODIFIER => flag that make a different version of an element.
   * BEM is very popular because it creates a very low specificity selector which result in a more maintainable code.
+  * BEM tell us not to nest element, so, for example: `.card .card__side .card__picture` and not `.card__side__picture` although picture is nested inside the side element.
 
   ![bem](./pics/bem.png)
 
