@@ -52,8 +52,9 @@
   &__picture {
     background-size: cover;
     height: 23rem; // by experiment
+    background-blend-mode: screen;
     &--1 {
-      background-image: url(../img/nat-5.jpg);
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
     }
     &--2 {
       background-image: url(../img/nat-5.jpg);
