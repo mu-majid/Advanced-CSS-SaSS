@@ -1,0 +1,46 @@
+.card {
+  perspective: 150rem;
+  // for firefox to work
+  -moz-perspective: 150rem;
+  position: relative;
+
+  height: 50rem;
+
+  &__side {
+    color: $color-white;
+    height: 50rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+    width: 100%;
+    backface-visibility: hidden; // hide backside of element
+
+    &--front {
+      background-color: $color-white;
+
+    }
+
+    &--back {
+      transform: rotateY(180deg); // back already rotated without hovering
+
+      &--1 {
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+      }
+    }
+  }
+
+
+  // when we hover card component -> rotate it, and also rotate card side front only by 180deg
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  // when we hover card component -> rotate it, and also rotate card side back only by 0deg as it is already rotated 180deg as initial state
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
