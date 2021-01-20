@@ -7,10 +7,10 @@
   -moz-perspective: 150rem;
   position: relative;
 
-  height: 50rem;
+  height: 52rem;
 
   &__side {
-    height: 50rem;
+    height: 52rem;
     transition: all .9s ease;
     position: absolute;
     top: 0;
@@ -86,6 +86,24 @@
     box-decoration-break: clone;
     &--1 {
       background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      padding-inline-start: 0;
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+      }
     }
   }
 }
