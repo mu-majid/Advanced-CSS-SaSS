@@ -9,7 +9,6 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
-
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -26,8 +25,8 @@
 
   &__image {
     height: 100%; // will make image be fit into the shape height
-    transition: transform .5s;
-    transform: translateX(-4rem) scale(1.4);
+    transition: transform .1s;
+    transform: translateX(-4rem) scale(1.2);
     // backface-visibility: hidden;
   }
 
@@ -45,7 +44,7 @@
     font-size: 1.7rem;
     text-align: center;
     opacity: 0;
-    transition: all .5s;
+    transition: all .3s;
     // backface-visibility: hidden;
   }
 
