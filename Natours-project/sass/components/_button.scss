@@ -36,6 +36,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary-dark;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary-dark;
+    }
+  }
+
   &::after {
     content: ""; /* required even if empty*/
     display: inline-block; /* required & in our case inline-block like the btn we are trying to style*/
