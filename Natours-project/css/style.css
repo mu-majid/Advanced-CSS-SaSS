@@ -357,6 +357,7 @@ body {
   background-color: #ffffff;
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
   .story__shape {
@@ -367,10 +368,12 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: skewX(12deg);
+    transform: translateX(-3rem) skewX(12deg);
     position: relative; }
   .story__image {
-    height: 100%; }
+    height: 100%;
+    transition: transform .5s;
+    transform: translateX(-4rem) scale(1.4); }
   .story__text {
     transform: skewX(12deg); }
   .story__caption {
@@ -382,7 +385,14 @@ body {
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;
-    opacity: 0; }
+    opacity: 0;
+    transition: all .5s; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    filter: blur(3px) brightness(75%);
+    transform: translateX(-4rem) scale(1); }
 
 .section-about {
   background-color: #f7f7f7;

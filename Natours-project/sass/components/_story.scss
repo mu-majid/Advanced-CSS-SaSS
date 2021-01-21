@@ -5,6 +5,7 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
@@ -19,14 +20,15 @@
     // to make the shape actually aa circle
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: skewX(12deg);
-
+    transform: translateX(-3rem) skewX(12deg);
     position: relative;
   }
 
   &__image {
     height: 100%; // will make image be fit into the shape height
-
+    transition: transform .5s;
+    transform: translateX(-4rem) scale(1.4);
+    // backface-visibility: hidden;
   }
 
   &__text {
@@ -43,5 +45,17 @@
     font-size: 1.7rem;
     text-align: center;
     opacity: 0;
+    transition: all .5s;
+    // backface-visibility: hidden;
+  }
+
+  &:hover &__caption { // what happens to caption when we hover
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image { // what happens to image when we hover
+    filter: blur(3px) brightness(75%);
+    transform: translateX(-4rem) scale(1);
   }
 }
