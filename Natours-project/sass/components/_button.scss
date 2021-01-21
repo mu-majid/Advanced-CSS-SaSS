@@ -17,7 +17,7 @@
 
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
+      opacity: 0; // to fade out the scaled `after` pseudo element
     }
   }
 
@@ -33,6 +33,15 @@
 
     &::after {
       background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary-dark;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary-dark;
     }
   }
 
