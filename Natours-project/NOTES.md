@@ -80,6 +80,10 @@
   * Utility classes keep out components reusable and allow us to use them independently, for example, having heading-secondary class (h2 element) and may be we will center it in one page and not the other, so we should use a utility class (div with class) to wrap that heading-secondary we want to center. Same also may be applied to margins bottom to a heading or something like that.
   * always define images widths and `left, right` positioning with `%` for responsive pages.
   * This [article](https://css-tricks.com/almanac/properties/p/perspective/) describes the difference between `perspective` and transform: perspective.
+  * Centering a block element inside another block element (`margin: 0 auto`).
+  * Best way to make space between an element and a floated element is to use transform, and not padding or margins.
+  * For responsive web design, always remember, images needs a width (**ALWAYS**).
+  * there is no way two transform properties to be applied in the same time right now in css.
 
 ## What is Viewport ?
 

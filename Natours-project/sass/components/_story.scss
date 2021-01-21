@@ -1,0 +1,60 @@
+.story {
+  width: 75%;
+  margin: 0 auto; // centering block element inside block element
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  background-color: rgba($color-white, .6);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    // to make text float around a circle
+    -webkit-shape-outside: circle(50% at 50% 50%); 
+    shape-outside: circle(50% at 50% 50%); // radius 50%,and this needs element to be floated like our case and has defined dimensions
+    // to make the shape actually aa circle
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+  }
+
+  &__image {
+    height: 100%; // will make image be fit into the shape height
+    transition: transform .1s;
+    transform: translateX(-4rem) scale(1.2);
+    // backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+    // backface-visibility: hidden;
+  }
+
+  &:hover &__caption { // what happens to caption when we hover
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__image { // what happens to image when we hover
+    filter: blur(3px) brightness(75%);
+    transform: translateX(-4rem) scale(1);
+  }
+}
