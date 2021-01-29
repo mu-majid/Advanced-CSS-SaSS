@@ -84,6 +84,7 @@
   * Best way to make space between an element and a floated element is to use transform, and not padding or margins.
   * For responsive web design, always remember, images needs a width (**ALWAYS**).
   * there is no way two transform properties to be applied in the same time right now in css.
+  * Sibling selectors in CSS is used to select either a direct sibling (+) (an html element right after the one we are selecting) or a general sibling (~) (any html after the element we are selecting on the same level)
 
 ## What is Viewport ?
 
