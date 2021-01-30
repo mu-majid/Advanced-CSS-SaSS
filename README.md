@@ -205,3 +205,6 @@
     - The first way is to choose breakpoints based on popular devices like Apple products. (easy but bad)
     - Group most used devices widths (search internet), and in this logical grouping we determine the breakpoints. (good way)
     - Start with an approach (mobile vs desktop), then start decreasing/increasing the screen size and observe where the design breaks and no longer design looks good, then put an breakpoint (perfect but hard)
+
+  * `em` and `rem` are not effected by the root font-size in media queries. that means that em and rem are calculated in media queries from the font size coming from the browser.
+  * With media queries we use `em` and not `rem` (by experiment rem is not good with MQ).
