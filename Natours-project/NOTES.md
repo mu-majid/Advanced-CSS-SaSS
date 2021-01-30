@@ -85,6 +85,7 @@
   * For responsive web design, always remember, images needs a width (**ALWAYS**).
   * there is no way two transform properties to be applied in the same time right now in css.
   * Sibling selectors in CSS is used to select either a direct sibling (+) (an html element right after the one we are selecting) or a general sibling (~) (any html after the element we are selecting on the same level)
+  * `em` is calculated from the font-size of the element the unit is used on.
 
 ## What is Viewport ?
 
