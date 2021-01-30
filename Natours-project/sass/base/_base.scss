@@ -14,8 +14,33 @@
 // this could be a typography
 // BUT it is actually a global definition of what a `rem` is
 html {
+  // define what 1rem is 
   /* to make our life easier (default=16px) */
   font-size: 62.5%; /* 62.5/100 * 16px = 10px, We are using % so that root font size change if user changes his browser's default by zooming*/ 
+
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+
+  // width < 1200px ?
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+  }
+  
+  // width < 900px ?
+  @include respond(tab-port) { 
+    font-size: 50%;  // 1 rem = 8px,  8/16 = 50%
+  }
+
+  // width < 600px ?
+  @include respond(phone) { 
+    font-size: 30%;  // 1 rem = 4.8px,  8/16 = 50%
+  }
+
+  // width > 1800px
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem  = 12px, 12/16 = 75%
+  }
 }
 
 /* Check typography file for other presetting */

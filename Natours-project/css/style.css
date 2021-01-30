@@ -1,3 +1,11 @@
+/*
+0 - 600px        Phone
+600 - 900px      Tablet portrait
+900 - 1200px     Tablet landscape
+600 - 900px      Tablet portrait
+[1200 - 1800]    Is where normal styles apply
+1800 +           Big screens
+*/
 /* CSS Reset*/
 *
 *::after
@@ -11,6 +19,18 @@ html {
   /* to make our life easier (default=16px) */
   font-size: 62.5%;
   /* 62.5/100 * 16px = 10px, We are using % so that root font size change if user changes his browser's default by zooming*/ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 30%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /* Check typography file for other presetting */
 body {
@@ -713,6 +733,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1500;
+  visibility: hidden;
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -755,7 +776,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
-  opacity: 1; }
+  opacity: 1;
+  visibility: visible; }
 
 .navigation__icon {
   position: relative;

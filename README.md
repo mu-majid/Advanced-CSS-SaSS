@@ -190,3 +190,21 @@
     6. Functions, that their return variables could be used later.
     7. Extends: make different selector inherit  declarations that are common to all of them.
     8. Control Directives: for writing complex code using conditionals and loops. [Not Included]
+
+  ## Mobile First vs Desktop First design:
+
+  * The idea here is to design pages whether for the desktop or for the mobile and then use media queries to adjust the styles if a minimum/maximum width is reached.
+
+  * with desktop approach we use the `max-width` query. which means if the width is equal or less then a max value, apply these styles.
+
+  * And with the mobile approach we use `min-width` queries.
+
+  * these `min-width` and `max-width` are also called breakpoints. And choosing these breakpoints is essential to our design.
+
+  * **How to choose breakpoints**? 
+    - The first way is to choose breakpoints based on popular devices like Apple products. (easy but bad)
+    - Group most used devices widths (search internet), and in this logical grouping we determine the breakpoints. (good way)
+    - Start with an approach (mobile vs desktop), then start decreasing/increasing the screen size and observe where the design breaks and no longer design looks good, then put an breakpoint (perfect but hard)
+
+  * `em` and `rem` are not effected by the root font-size in media queries. that means that em and rem are calculated in media queries from the font size coming from the browser.
+  * With media queries we use `em` and not `rem` (by experiment rem is not good with MQ).
