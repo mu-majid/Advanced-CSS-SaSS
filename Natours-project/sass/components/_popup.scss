@@ -1,0 +1,52 @@
+.popup {
+  // to span all the screen
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  // to position the element (important with fixed positioning)
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, .8);
+  z-index: 9999;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    width: 75%;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+  }
+
+  &__left {
+    width: 33.333333%;
+    display: table-cell;
+  }
+  &__right {
+    width: 66.666666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  &__img {
+    display: block;
+    width: 100%; // of the containing element
+  }
+  &__text {
+    margin-bottom: 4rem;
+    font-size: 1.4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #eee;
+    
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+}
