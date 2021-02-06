@@ -637,6 +637,12 @@ body {
   /* to clip or cut  part of the visible element */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* to clip or cut  part of the visible element */ }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      /* to clip or cut  part of the visible element */
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      /* to clip or cut  part of the visible element */ } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
