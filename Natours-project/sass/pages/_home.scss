@@ -2,6 +2,10 @@
   background-color: $color-grey-light-1;
   padding: 25rem 0; // gives us a space
   margin-top: -20vh; // move the section above a 20vh
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -21,17 +25,27 @@
     transform: skewY(7deg);
 
   }
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
+  }
 }
 
 .section-tours {
   background-color: $color-grey-light-1;
   padding: 25rem 0 15rem 0; // gives us a space
   margin-top: -16vh; // move the section above a 20vh
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
 }
 
 .section-stories {
   padding: 15rem 0;
   position: relative;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-book {
@@ -40,7 +54,10 @@
     to right bottom, 
     $color-primary-light, 
     $color-primary-dark
-  )
+  );
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .book {
