@@ -210,3 +210,4 @@
   * With media queries we use `em` and not `rem` (by experiment rem is not good with MQ).
 
   * When writing media queries when Desktop-first approach is in mind, we write the larger width rules first then the smaller ones.
+  * For grid Systems, when writing media queries for it, we basically make width of all columns to 100%, so all columns will be transformed to rows.
