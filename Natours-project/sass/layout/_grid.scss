@@ -13,6 +13,7 @@
   // in this screen size, viewport width is lower from max-width of 114rem, and row takes the entire screen width
   @include respond(tab-port) { 
     max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
