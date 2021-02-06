@@ -208,3 +208,5 @@
 
   * `em` and `rem` are not effected by the root font-size in media queries. that means that em and rem are calculated in media queries from the font size coming from the browser.
   * With media queries we use `em` and not `rem` (by experiment rem is not good with MQ).
+
+  * When writing media queries when Desktop-first approach is in mind, we write the larger width rules first then the smaller ones.

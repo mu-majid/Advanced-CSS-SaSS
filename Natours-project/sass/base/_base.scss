@@ -46,4 +46,10 @@ html {
 /* Check typography file for other presetting */
 body {
   box-sizing: border-box;
+  padding: 3rem; /* applying padding to the whole site, to give us a nice white space */
+
+  // width < 900px ?
+  @include respond(tab-port) { 
+    padding: 0; /* remove white space border */
+  }
 }

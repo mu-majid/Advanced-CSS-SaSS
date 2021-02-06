@@ -6,6 +6,10 @@
 [1200 - 1800]    Is where normal styles apply
 1800 +           Big screens
 */
+/*
+  order of writing media queries
+  ORDER: BASE + typography > general layout + grid > page layout > components
+*/
 /* CSS Reset*/
 *
 *::after
@@ -34,7 +38,13 @@ html {
 
 /* Check typography file for other presetting */
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  /* applying padding to the whole site, to give us a nice white space */ }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0;
+      /* remove white space border */ } }
 
 @keyframes moveInLeft {
   /* Initial State*/
@@ -81,9 +91,7 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  /* set text color*/
-  padding: 3rem;
-  /* applying padding to the whole site, to give us a nice white space */ }
+  /* set text color*/ }
 
 .heading-primary {
   color: #ffffff;
@@ -100,6 +108,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     /* to make it take the full width and add line break*/
@@ -109,6 +121,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -120,6 +135,12 @@ body {
   color: transparent;
   transition: all .2s;
   letter-spacing: 2px; }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
