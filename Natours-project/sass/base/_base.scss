@@ -53,3 +53,8 @@ body {
     padding: 0; /* remove white space border */
   }
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
