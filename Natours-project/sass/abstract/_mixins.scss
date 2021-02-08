@@ -16,6 +16,11 @@
 1800 +           Big screens
 */
 
+/*
+  order of writing media queries
+  ORDER: BASE + typography > general layout + grid > page layout > components
+*/
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content };    // 600px

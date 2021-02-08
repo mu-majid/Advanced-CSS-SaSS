@@ -118,7 +118,6 @@
 
         For backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 pseudo-elements.
 
-
 ## Why and How to use `rem/em`?
 
   - because we want an easy way to change measurements in our page with one simple setting, meaning, **REMEMBER** that `rem` is calculated relative to the root `font-size`. And changing this root size will affect all our measurements if they were in `rem`s.
@@ -144,6 +143,7 @@
   **Flexbox**: laying element in one dimensional row.
 
   **CSS Grid**: used for a 2-d layout page.
+
 
 ## Designing a Custom Grid:
 
