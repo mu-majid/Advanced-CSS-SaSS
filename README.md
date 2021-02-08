@@ -211,3 +211,11 @@
 
   * When writing media queries when Desktop-first approach is in mind, we write the larger width rules first then the smaller ones.
   * For grid Systems, when writing media queries for it, we basically make width of all columns to 100%, so all columns will be transformed to rows.
+
+  ## Responsive Images:
+    * The goal is to send the right image to the right image size, so that, avoid downloading unnecessary large images on smaller screens.
+
+    **Use cases**:
+      1. Resolution switching: from large scree to smaller screen.
+      2. Density switching: depend on the screen resolution.
+      3. Art direction: serving different image entirely on smaller screens.
