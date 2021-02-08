@@ -216,6 +216,6 @@
     * The goal is to send the right image to the right image size, so that, avoid downloading unnecessary large images on smaller screens.
 
     **Use cases**:
-      1. Resolution switching: from large scree to smaller screen.
-      2. Density switching: depend on the screen resolution.
-      3. Art direction: serving different image entirely on smaller screens.
+      1. Resolution switching: from large screen to smaller screen.
+      2. Density switching: depend on the screen resolution. (Using sizes and srcset attributes on <img> and specifying widths and make browser what image to use)
+      3. Art direction: serving different image entirely on smaller screens. (Using <picture> and <source> HTML elements)
