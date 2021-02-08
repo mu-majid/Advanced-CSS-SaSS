@@ -737,7 +737,7 @@ body {
   position: relative;
   height: 95vh;
   /* height of header element should be of 95% of the viewport height */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   /* linear grad shown on top, then the image*/
   background-size: cover;
   /* whatever the width of the view port/element, it will ty to fit the element to box width */
@@ -747,6 +747,9 @@ body {
   /* to clip or cut  part of the visible element */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* to clip or cut  part of the visible element */ }
+  @media (min-resolution: 192dpi) and (min-width: 600px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
