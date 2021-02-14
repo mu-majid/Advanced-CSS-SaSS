@@ -201,6 +201,9 @@
 
   * these `min-width` and `max-width` are also called breakpoints. And choosing these breakpoints is essential to our design.
 
+  ![mobile-vs-desktop](./pics/mobile-desktop.png)
+
+
   * **How to choose breakpoints**? 
     - The first way is to choose breakpoints based on popular devices like Apple products. (easy but bad)
     - Group most used devices widths (search internet), and in this logical grouping we determine the breakpoints. (good way)
@@ -219,3 +222,19 @@
       1. Resolution switching: from large screen to smaller screen.
       2. Density switching: depend on the screen resolution. (Using sizes and srcset attributes on <img> and specifying widths and make browser what image to use)
       3. Art direction: serving different image entirely on smaller screens. (Using <picture> and <source> HTML elements)
+
+---
+
+  ## Why Flexbox?
+
+  - New module in CSS3 that makes it easy to align elements to one another in different directions, the main idea behind flexbox is to give the container the ability to expand and shrink elements to best use all available space.
+
+  - It replaces float layouts using less and more readable and logical code. Used for one-dimensional layouts.
+
+  - **Concepts**
+
+  - As shown below: flex defines `flex container`, `flex item`, `main axis` and `cross axis` 
+  ![flex-concept](./pics/flex-concepts.png)
+
+  - the CSS properties used on each concept are as follows
+  ![css-flex](./pics/css-flex.png)
