@@ -236,5 +236,16 @@
   - As shown below: flex defines `flex container`, `flex item`, `main axis` and `cross axis` 
   ![flex-concept](./pics/flex-concepts.png)
 
-  - the CSS properties used on each concept are as follows
+  - the CSS properties used on each concept are as follows:
+
+    * flex-direction: specify the main axis direction.
+    * flex-wrap: if the items exceed container width.
+    * justify-content: how items are aligned along the main axis.
+    * align-items: how the items are aligned along the cross axis.
+    * align-content: only applies if there are more than one row of flex items.
+
+    * align-self: like align-items but for one item only.
+    * order: order of the item that should appear in the container.
+    * flex-grow, flex-shrink, flex-basis : help to decide what the flex item width should be.
+    
   ![css-flex](./pics/css-flex.png)
