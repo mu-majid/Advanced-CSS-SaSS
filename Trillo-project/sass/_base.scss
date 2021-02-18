@@ -15,30 +15,39 @@ Grey dark 2: #777
 Grey dark 3: #999
 
 */
+
+// defining CSS variables
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
   --color-primary-dark: #BA265D;
+
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
+
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999;
+}
 
+// global reset
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%; // 1 rem = 10px, 10px/16px = 62.5%
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -47,4 +56,6 @@ body {
   color: var(--color-grey-dark-2);
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-repeat: none;
-  min-height: 100vh; }
+
+  min-height: 100vh;
+}
