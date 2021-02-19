@@ -4,3 +4,4 @@
 
 * Prefer to use SVG over icon fonts, icon fonts usually fails on some browsers.
 
+* to format an SVG icon, we need to set its height and width
