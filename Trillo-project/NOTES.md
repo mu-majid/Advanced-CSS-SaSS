@@ -9,3 +9,5 @@
 * Usually the side bar is a `ul` html element.
 
 * When using SVGs in HTML, Prefer to use a sprite svg file, because it saves unnecessary http calls.
+
+* z-index only works if the position property is set.
