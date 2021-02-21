@@ -124,17 +124,32 @@
 //  SIDE NAVIGATION
 
 .side-nav {
-  &__item {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem;
 
+  &__item {
+    
   }
 
-  &__link {
 
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: var(--color-grey-light-1);
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
   }
 }
 
