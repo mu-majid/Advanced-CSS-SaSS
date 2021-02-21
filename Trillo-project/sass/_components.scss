@@ -204,3 +204,43 @@
 
 
 }
+
+/////////////////////
+// HOTEL OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+  
+  &__heading {
+
+  }
+
+  &__stars {
+    margin-right: auto; // instead of flex: 1; which grows the element itself
+  }
+
+  &__location {
+
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: var(--color-primary);
+  }
+
+  &__rating {
+
+  }
+
+  &__rating-count {
+
+  }
+
+  &__rating-average {
+
+  }
+}

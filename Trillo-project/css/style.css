@@ -208,3 +208,14 @@ body {
   .gallery__photo {
     width: 100%;
     display: block; }
+
+.overview {
+  display: flex;
+  align-items: center; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: var(--color-primary); }
