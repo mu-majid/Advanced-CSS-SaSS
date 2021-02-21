@@ -38,7 +38,6 @@
   background-color: #fff;
   flex: 1;
 
-  height: 80rem;
 }
 
 .detail {
@@ -53,7 +52,8 @@
   box-shadow: 0 2rem 5rem rgba(70, 55, 55, 0.06);
   padding: 3rem;
   flex: 0 0 60%;
-  margin-right: 4.5rem
+  margin-right: 4.5rem;
+  font-size: 1.4rem;
 }
 
 .user-reviews {
