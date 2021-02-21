@@ -17,6 +17,7 @@
   align-items: center;
 }
 
+// contain side-bar and hotel view
 .content {
   display: flex;
 }
@@ -27,9 +28,15 @@
   // define width for a flex item using flex-basis
   // flex: grow shrink flex-basis
   flex: 0 0 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
   background-color: #fff;
   flex: 1;
+
+  height: 80rem;
 }
