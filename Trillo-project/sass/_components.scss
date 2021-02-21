@@ -312,3 +312,77 @@
 
 //////////////////////
 // HOTEL DESCRIPTION
+
+
+//////////////////////
+// HOTEL DESCRIPTION > PARAGRAPH
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+
+//////////////////////
+// HOTEL DESCRIPTION > LIST
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: 1px solid var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+  }
+
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: .7rem;
+
+    // older browsers
+    // background-image: url(../img/chevron-thin-right.svg);
+    // background-size: cover;
+
+    // newer browsers - masks
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../img/chevron-thin-right.svg);
+    mask-size: cover;
+  }
+}
+
+//////////////////////
+// HOTEL DESCRIPTION > RECOMMEND
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+
+  }
+
+  &__photo {
+    box-sizing: content-box; // border is not calculated from the height and width of the element
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+  }
+}
