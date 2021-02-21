@@ -11,3 +11,5 @@
 * When using SVGs in HTML, Prefer to use a sprite svg file, because it saves unnecessary http calls.
 
 * z-index only works if the position property is set.
+
+* With flexbox, when we want to create spaces between flex items, we could margin: auto trick.
