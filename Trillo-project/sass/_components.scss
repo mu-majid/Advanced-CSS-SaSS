@@ -211,13 +211,20 @@
 .overview {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+
   
   &__heading {
-
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
     margin-right: auto; // instead of flex: 1; which grows the element itself
+    display: flex;
   }
 
   &__location {
@@ -228,7 +235,6 @@
   &__icon-location {
     width: 1.75rem;
     height: 1.75rem;
-    margin-right: 2rem;
     fill: var(--color-primary);
   }
 
@@ -242,5 +248,46 @@
 
   &__rating-average {
 
+  }
+}
+
+/////////////////
+// BUTTON INLINE
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit; // for reusability
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
   }
 }
