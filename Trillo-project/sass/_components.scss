@@ -191,3 +191,16 @@
   font-size: 1.2rem;
   padding: 2.5rem;
 }
+
+/////////////////////
+// GALLERY
+
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%; // to make it auto fit the containing container width (in our case it is a flex container, so they will be side by side occupying the entire width )
+    display: block;
+  }
+
+
+}
