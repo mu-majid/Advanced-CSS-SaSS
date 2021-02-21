@@ -228,7 +228,9 @@
   }
 
   &__location {
-
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
   }
 
   &__icon-star,
@@ -238,16 +240,32 @@
     fill: var(--color-primary);
   }
 
-  &__rating {
+  &__icon-location {
+    margin-right: .5rem;
+  }
 
+  &__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: white;
+    align-self: stretch;
+    padding: 0 2.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   &__rating-count {
-
+    font-size: .8rem;
+    text-transform: uppercase;;
   }
 
   &__rating-average {
-
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
   }
 }
 

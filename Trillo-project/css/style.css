@@ -222,10 +222,33 @@ body {
   .overview__stars {
     margin-right: auto;
     display: flex; }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
   .overview__icon-star, .overview__icon-location {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+  .overview__icon-location {
+    margin-right: .5rem; }
+  .overview__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: white;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .overview__rating-count {
+    font-size: .8rem;
+    text-transform: uppercase; }
+  .overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px; }
 
 .btn-inline {
   border: none;
