@@ -370,12 +370,11 @@
     margin-right: auto;
   }
 
-  &__friends {
 
-  }
 
   &__photo {
-    box-sizing: content-box; // border is not calculated from the height and width of the element
+    // border is not calculated from the height and width of the element
+    box-sizing: content-box; 
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
