@@ -462,3 +462,69 @@
   }
 
 }
+
+///////////////////
+// CALL TO ACTION
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+
+// Button with visible and hidden texts
+.btn {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 100px;
+  text-transform: uppercase;
+  font-weight: 300;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #fff;
+  position: relative;
+  // the hidden text is an overflowing element with respect to the btn element
+  // and we want it to be hidden, so we use overflow: hidden
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block; // children are span which is an inline element but we want to use padding
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__hidden {
+    position: absolute;
+    left: 0;
+    top: -100%; // calc from element height
+    padding: 2rem;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+  }
+
+  &:hover &__visible{
+    transform: translateY(100%);
+  }
+
+  &:hover &__hidden{
+    top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
+  }
+}
