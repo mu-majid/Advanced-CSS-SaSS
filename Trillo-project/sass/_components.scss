@@ -12,6 +12,13 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+
+  }
+
   // input elements don't inherit global document font
   &__input {
     font-family: inherit;

@@ -21,6 +21,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: $bp-smallest) {
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 11rem;
+  }
 }
 
 // contain side-bar and hotel view
