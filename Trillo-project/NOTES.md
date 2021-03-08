@@ -15,3 +15,7 @@
 * z-index only works if the position property is set.
 
 * With flexbox, when we want to create spaces between flex items, we could margin: auto trick.
+
+* <figure> element is a good choice for user reviews.
+
+* `z-index` only works if the position is set on the element. 
