@@ -56,8 +56,13 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: 1px solid var(--color-grey-light-2);
+
   @media only screen and (max-width: $bp-medium) {
     padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
   }
 }
 
@@ -70,6 +75,12 @@
   @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
     margin-right: 3rem;
+
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
 
   }
 }
