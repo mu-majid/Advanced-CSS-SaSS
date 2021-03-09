@@ -20,4 +20,8 @@
 
 * `z-index` only works if the position is set on the element. 
 
-* Centring text in an an inline element like `a` could be done by using `line-height` property and setting it to the exact inline element height would center the content. 
+* Centring text in an an inline element like `a` could be done by using `line-height` property and setting it to the exact inline element height would center the content.
+
+* the idea behind line height is that it adds same amount of pixels above and below the text-line.
+
+* prefer to use percentages with line height (percentage is calculated from the font size)
