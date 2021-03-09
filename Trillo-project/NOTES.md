@@ -19,3 +19,5 @@
 * <figure> element is a good choice for user reviews.
 
 * `z-index` only works if the position is set on the element. 
+
+* Centring text in an an inline element like `a` could be done by using `line-height` property and setting it to the exact inline element height would center the content. 
