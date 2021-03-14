@@ -1,5 +1,7 @@
 ## Project Notes
 
+* Review this link https://developers.google.com/web/fundamentals/performance/rendering
+
 * We will nor focus much on architecture in this project. Only we will create `base`, `components`, and `layout`.
 
 * CSS variables could be manipulated with javascript and could be used instead of preprocessor variables
