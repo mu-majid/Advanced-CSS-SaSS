@@ -24,4 +24,4 @@
 
 * the idea behind line height is that it adds same amount of pixels above and below the text-line.
 
-* prefer to use percentages with line height (percentage is calculated from the font size)
+* prefer to use percentages with line height (percentage is calculated from the font size)ز
